@@ -5,8 +5,15 @@ export default class App extends Component {
     super();
 
     this.state = {
-      num: Math.random()
+      num: 0,
     };
+  }
+
+  random = () => {
+    let newRandom = Math.random()
+    this.setState({
+      num: newRandom,
+    })
   }
 
   render() {
@@ -16,7 +23,7 @@ export default class App extends Component {
         {this.state.num}
         <br />
         <br />
-        <button onClick={() => this.state.num = Math.random()}>
+        <button onClick={() => this.random()}>
           Generate new random number
         </button>
       </div>
