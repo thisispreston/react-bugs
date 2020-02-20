@@ -9,7 +9,7 @@ export default class App extends React.Component {
     };
   }
 
-  renber() {
+  render() {
     const items = this.state.groceryList.map(item => {
       return <Item key={item} item={item} />;
     });
